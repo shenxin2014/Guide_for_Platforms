@@ -3,9 +3,8 @@
 > 官方入口：[RuStore SDK 文档](https://www.rustore.ru/help/zh/sdk)、[应用内支付 PaySDK](https://www.rustore.ru/help/zh/sdk/pay)
 
 [一、接入前准备](#一接入前准备)
-* [1. PaySDK 功能与限制](#1-paysdk-功能与限制)
-* [2. 后台配置](#2-后台配置)
-* [3. 推荐支付流程](#3-推荐支付流程)
+* [1. 后台配置](#1-后台配置)
+* [2. 推荐支付流程](#2-推荐支付流程)
 
 [二、Android Kotlin/Java 接入](#二android-kotlinjava-接入)
 * [1. 添加 Maven 仓库与 SDK 依赖](#1-添加-maven-仓库与-sdk-依赖)
@@ -31,28 +30,8 @@
 
 ## 一、接入前准备
 
-### 1. PaySDK 功能与限制
 
-RuStore PaySDK 是 RuStore 当前用于应用内支付的新 SDK，适合一次性商品、消耗品和需要支付回跳的业务场景。
-
-当前 PaySDK 支持：
-
-* 单阶段支付：支付成功后直接完成扣款。
-* 两阶段支付：先冻结资金，开发者发货后再确认扣款。
-* 一次最多请求 1000 个商品信息。
-* 未登录用户也可以获取商品列表、发起支付。
-* 优惠券、积分或奖金的部分抵扣。
-* 通过统一接口获取用户购买记录。
-* 通过 `OnFailureListener` / Task failure 统一处理取消和支付错误。
-* 服务端通知中携带 `developerPayload`，用于业务订单关联。
-
-当前限制：
-
-* 订阅付费当前在 PaySDK 中仍属于临时缺失能力，官方文档标注为后续支持。
-* 当前支付方式以银行卡和 SBP 为主；SberPay、手机号余额、T-Pay 等能力官方文档标注为后续支持。
-* 如果项目仍在使用旧版 `billingClient SDK`，迁移时需要参考官方迁移文档，不建议混用旧接口和 PaySDK 新接口。
-
-### 2. 后台配置
+### 1. 后台配置
 
 接入前需要在 [RuStore Console](https://console.rustore.ru/sign-in) 完成以下配置：
 
