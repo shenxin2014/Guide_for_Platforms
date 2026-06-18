@@ -1,4 +1,4 @@
-# RuStore 上架资料提取文档
+# RuStore 上架资料提交文档
 
 > 提交链接：https://vika.cn/workbench/fomRecnTlCyvkUjuDX?improveType=phone 
 
